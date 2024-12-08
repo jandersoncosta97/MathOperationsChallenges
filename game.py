@@ -2,9 +2,10 @@ from models.calcular import Calcular
 
 def main() -> None:
     pontos: int = 0
+    jogar(pontos)
 
 def jogar(pontos: int) -> None:
-    dificuldade: int = input('Informe o nível de dificuldade desejado [1, 2, 3 ou 4]: ')
+    dificuldade: int = int(input('Informe o nível de dificuldade desejado [1, 2, 3 ou 4]: '))
 
     calc: Calcular = Calcular(dificuldade)
 
