@@ -18,12 +18,16 @@ def jogar(pontos: int) -> None:
         pontos += 1
     print(f'Você possui {pontos} ponto' if pontos <= 1 else f'Você possui {pontos} pontos')
 
-    continuar: int = int(input('Deseja continuar no jogo? [1 - sim, 0 - não] '))
+    continuar: int = int(input('Deseja continuar no jogo? [1 - sim, 0 - não]: '))
+    while continuar not in [0, 1]:
+        continuar: int = int(input('Valor inserido incorreto. Deseja continuar no jogo? [1 - sim, 0 - não]: '))
     if continuar:
         jogar(pontos)
     else:
         print(f'Você finalizou com {pontos} ponto' if pontos <= 1 else f'Você finalizou com {pontos} pontos')
         print('Até a próxima!')
+
+
     
 if __name__ == '__main__':
     main()
